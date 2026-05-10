@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 import { DM_Serif_Display, Inter } from "next/font/google";
+import Footer from "@/components/Footer";
 
 const dmSerif = DM_Serif_Display({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
