@@ -22,7 +22,7 @@ export default function Footer() {
 
             <div className={styles.brandText}>
               <h2>MONARCH EVO</h2>
-              <span>PREMIUM CONSTRUCTION</span>
+              <span>DESIGN & BUILD</span>
             </div>
           </div>
 
