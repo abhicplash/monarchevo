@@ -275,7 +275,11 @@ export default function AboutPage() {
           <div className={styles.founderRight}>
             <div className={styles.sectionOverline}>FOUNDER'S MESSAGE</div>
             <blockquote className={styles.founderMessage}>
-              "The foundation of MONARCHEVO is built on the vision and dedication of Mr. Sreenivasan T.B., who established Monarch Construction, a proprietorship firm, in 1984 at Talikulam, Thrissur. Through his unwavering commitment to quality, integrity, and customer satisfaction, he successfully completed over 250 residential and commercial projects, earning a strong reputation in the construction industry. Following in his father's footsteps, Keerthy Sreenivasan gained valuable hands-on experience working alongside him before founding MONARCHEVO. Today, the company proudly carries forward this legacy of craftsmanship, trust, and excellence while embracing modern architectural design, interior design, and construction practices.
+              "The foundation of MONARCHEVO is built on the vision and dedication of Mr. Sreenivasan T.B., 
+              who established Monarch Construction, a proprietorship firm, in 1984 at Talikulam, 
+              Thrissur. Through his unwavering commitment to quality, integrity, and customer satisfaction,
+               he successfully completed over 250 residential and commercial projects, 
+               earning a strong reputation in the construction industry. Following in her father's footsteps, Keerthy Sreenivasan gained valuable hands-on experience working alongside him before founding MONARCHEVO. Today, the company proudly carries forward this legacy of craftsmanship, trust, and excellence while embracing modern architectural design, interior design, and construction practices.
               {/* "At MONARCHEVO, we believe every project deserves attention to
               detail, transparent execution, and uncompromising workmanship.
               Whether it is designing dream homes, commercial spaces, luxury
