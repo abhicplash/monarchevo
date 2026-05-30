@@ -297,41 +297,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Timeline ── */}
-      <section
-        ref={(el) => addRef(el, "timeline")}
-        className={`${styles.timelineSection} ${visibleSections.has("timeline") ? styles.visible : ""}`}
-      >
-        <div className={styles.sectionHeader}>
-          <div className={styles.sectionOverline}>Why Choose</div>
-          <h2 className={styles.sectionTitle}>
-            {/* MONARCHEVO ? */}
-            <em>MONARCHEVO ?</em>
-          </h2>
-        </div>
-
-        <div className={styles.timeline}>
-          <div className={styles.timelineLine} />
-          {TIMELINE.map((item, i) => (
-            <div
-              key={i}
-              className={`${styles.timelineItem} ${i % 2 === 0 ? styles.timelineLeft : styles.timelineRight} ${activeYear === i ? styles.timelineActive : ""}`}
-              onClick={() => setActiveYear(activeYear === i ? null : i)}
-            >
-              <div className={styles.timelineDot}>
-                <div className={styles.timelineDotInner} />
-              </div>
-              <div className={styles.timelineCard}>
-                <div className={styles.timelineYear}>{item.NO}</div>
-                <div className={styles.timelineTitle}>{item.title}</div>
-                <div className={styles.timelineDesc}>{item.desc}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── Team ── */}
+       {/* ── Team ── */}
       <section
         ref={(el) => addRef(el, "team")}
         className={`${styles.teamSection} ${visibleSections.has("team") ? styles.visible : ""}`}
@@ -384,6 +350,42 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
+
+      {/* ── Timeline ── */}
+      <section
+        ref={(el) => addRef(el, "timeline")}
+        className={`${styles.timelineSection} ${visibleSections.has("timeline") ? styles.visible : ""}`}
+      >
+        <div className={styles.sectionHeader}>
+          <div className={styles.sectionOverline}>Why Choose</div>
+          <h2 className={styles.sectionTitle}>
+            {/* MONARCHEVO ? */}
+            <em>MONARCHEVO ?</em>
+          </h2>
+        </div>
+
+        <div className={styles.timeline}>
+          <div className={styles.timelineLine} />
+          {TIMELINE.map((item, i) => (
+            <div
+              key={i}
+              className={`${styles.timelineItem} ${i % 2 === 0 ? styles.timelineLeft : styles.timelineRight} ${activeYear === i ? styles.timelineActive : ""}`}
+              onClick={() => setActiveYear(activeYear === i ? null : i)}
+            >
+              <div className={styles.timelineDot}>
+                <div className={styles.timelineDotInner} />
+              </div>
+              <div className={styles.timelineCard}>
+                <div className={styles.timelineYear}>{item.NO}</div>
+                <div className={styles.timelineTitle}>{item.title}</div>
+                <div className={styles.timelineDesc}>{item.desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+     
 
       {/* ── Certifications ── */}
       {/* <section
