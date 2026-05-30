@@ -50,7 +50,7 @@
 
 .logo {
   width: 2.5rem;
-  height: 2.5rem;
+  height: auto;
   transition: 0.4s ease;
 
   animation: logoGlow 4s ease-in-out infinite;
@@ -458,10 +458,7 @@
     top: 100px;
   }
 
-  /* .logo {
-    width: 48px;
-    height: 48px;
-  } */
+
 
   .brandText h2 {
     font-size: 16px;

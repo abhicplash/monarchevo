@@ -23,12 +23,13 @@ export default function Navbar() {
             width={58}
             height={58}
             priority
+            // loading="eager"
             className={styles.logo}
           />
 
           <div className={styles.brandText}>
             <h2>MONARCHEVO</h2>
-            <span>PREMIUM CONSTRUCTION</span>
+            <span>DESIGN & BUILD</span>
           </div>
         </Link>
 
@@ -42,9 +43,7 @@ export default function Navbar() {
         </nav>
 
         {/* CTA BUTTON */}
-        <button className={styles.ctaBtn}>
-          Get Consultation
-        </button>
+        <button className={styles.ctaBtn}>Get Consultation</button>
 
         {/* MOBILE MENU BUTTON */}
         <button
@@ -60,9 +59,7 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       <div
-        className={`${styles.mobileMenu} ${
-          menuOpen ? styles.showMenu : ""
-        }`}
+        className={`${styles.mobileMenu} ${menuOpen ? styles.showMenu : ""}`}
       >
         <Link href="/" onClick={closeMenu}>
           Home
@@ -84,9 +81,7 @@ export default function Navbar() {
           Contact
         </Link>
 
-        <button className={styles.mobileBtn}>
-          Get Consultation
-        </button>
+        <button className={styles.mobileBtn}>Get Consultation</button>
       </div>
     </header>
   );

@@ -1,8 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap");
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --heading-font: var(--font-dmserif);
   --body-font: var(--font-inter);
+
+  --navy-deep: #060e1f;
+  --navy-mid: #0a1628;
+  --navy-surface: #0f1e35;
+  --navy-card: #112240;
+  --navy-border: #1a3050;
+  --blue-primary: #4a9eff;
+  --blue-accent: #6fb8ff;
+  --blue-glow: rgba(74, 158, 255, 0.18);
+  --blue-subtle: rgba(74, 158, 255, 0.08);
+  --white: #ffffff;
+  --white-80: rgba(255, 255, 255, 0.8);
+  --white-50: rgba(255, 255, 255, 0.5);
+  --white-20: rgba(255, 255, 255, 0.12);
+  --gold: #c9a96e;
+  --gold-light: #e2c98a;
+  --font-display: "Cormorant Garamond", "Times New Roman", Georgia, serif;
+  --font-body: "Jost", "Helvetica Neue", Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,6 +34,8 @@
 
 html {
   height: 100%;
+  scroll-behavior: smooth; /* smooth anchor scrolling */
+  overflow-x: hidden;
 }
 
 html,
@@ -22,7 +44,12 @@ body {
   overflow-x: hidden;
 }
 
-
+body {
+  background-color: var(
+    --navy-deep
+  ); /* prevents white flash between sections */
+  color: var(--white);
+}
 
 * {
   box-sizing: border-box;
@@ -35,4 +62,26 @@ a {
   text-decoration: none;
 }
 
+/* ── Scrollbar ───────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
 
+::-webkit-scrollbar-track {
+  background: var(--navy-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--navy-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-primary);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--navy-border) var(--navy-deep);
+}

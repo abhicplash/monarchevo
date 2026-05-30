@@ -17,7 +17,7 @@ const inter = Inter({
 
 export const metadata = {
   title: "Monarch Evo Design",
-  description: "Premium Construction Company",
+  description: "MONARCHEVO offers expert architectural design, interior design, and construction services in Ernakulam, Thrissur, and Malappuram. Trusted construction and design solutions since 2020",
 };
 
 export default function RootLayout({ children }) {
