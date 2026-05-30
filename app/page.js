@@ -1,19 +1,3 @@
-// "use client";
-
-// import Hero from "@/components/Hero";
-// import styles from "./page.module.css";
-// import { motion } from "framer-motion";
-// import Image from "next/image";
-
-// export default function Home() {
-//   return (
-//     <>
-
-//       <Hero />
-//     </>
-//   );
-// }
-
 "use client";
 import { useState, useEffect, useRef } from "react";
 import styles from "@/styles/Home.module.css";
@@ -99,7 +83,7 @@ const SERVICES = [
       </svg>
     ),
     title: "Custom Home Design",
-    desc: "Creating custom home designs tailored to your lifestyle, preferences, and unique vision."
+    desc: "Creating custom home designs tailored to your lifestyle, preferences, and unique vision.",
   },
   {
     icon: (
@@ -114,7 +98,7 @@ const SERVICES = [
       </svg>
     ),
     title: "Interior Design",
-    desc: "Transforming spaces with creative interior design solutions that blend style, comfort, and functionality."
+    desc: "Transforming spaces with creative interior design solutions that blend style, comfort, and functionality.",
   },
 ];
 
@@ -434,127 +418,6 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════
           FEATURED PROJECTS
       ══════════════════════════════════════════ */}
-      <section
-        ref={(el) => addRef(el, "projects")}
-        className={`${styles.projectsSection} ${isVisible("projects") ? styles.visible : ""}`}
-      >
-        <div className={styles.sectionHeader}>
-          <div className={styles.sectionOverline}>OUR WORK</div>
-          <h2 className={styles.sectionTitle}>
-            Featured <em>Projects</em>
-          </h2>
-          <p className={styles.sectionSub}>
-            A selection of landmark projects that define our portfolio — each a
-            testament to our craft and commitment.
-          </p>
-        </div>
-
-        <div className={styles.projectsLayout}>
-          {/* Sidebar nav */}
-          <div className={styles.projectNav}>
-            {PROJECTS.map((p, i) => (
-              <button
-                key={i}
-                className={`${styles.projectNavItem} ${activeProject === i ? styles.projectNavActive : ""}`}
-                onClick={() => setActiveProject(i)}
-              >
-                <span className={styles.projectNavNum}>
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className={styles.projectNavTitle}>{p.title}</span>
-              </button>
-            ))}
-          </div>
-
-          {/* Main display */}
-          <div className={styles.projectDisplay}>
-            {PROJECTS.map((p, i) => (
-              <div
-                key={i}
-                className={`${styles.projectCard} ${activeProject === i ? styles.projectCardActive : ""}`}
-              >
-                {/* Visual placeholder with geometric pattern */}
-                <div className={styles.projectVisual}>
-                  <div className={styles.projectPattern}>
-                    {Array.from({ length: 6 }, (_, r) =>
-                      Array.from({ length: 8 }, (_, c) => (
-                        <div
-                          key={`${r}-${c}`}
-                          className={styles.projectPatternCell}
-                          style={{
-                            opacity: (r + c) % 2 === 0 ? 0.15 : 0.05,
-                          }}
-                        />
-                      )),
-                    )}
-                  </div>
-                  <div className={styles.projectVisualCenter}>
-                    <div className={styles.projectVisualLogo}>M</div>
-                  </div>
-                </div>
-
-                <div className={styles.projectInfo}>
-                  <div className={styles.projectCategory}>{p.category}</div>
-                  <div className={styles.projectTitle}>{p.title}</div>
-                  <div className={styles.projectMeta}>
-                    <span>
-                      <svg
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                      >
-                        <path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.75 4.5 8.5 4.5 8.5s4.5-4.75 4.5-8.5c0-2.5-2-4.5-4.5-4.5z" />
-                        <circle cx="8" cy="6" r="1.5" />
-                      </svg>
-                      {p.location}
-                    </span>
-                    <span>
-                      <svg
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                      >
-                        <rect x="2" y="3" width="12" height="11" rx="1" />
-                        <path d="M2 7h12M6 3v2M10 3v2" />
-                      </svg>
-                      {p.year}
-                    </span>
-                    <span>
-                      <svg
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                      >
-                        <rect x="2" y="2" width="12" height="12" rx="1" />
-                        <path d="M6 2v12M2 6h12" />
-                      </svg>
-                      {p.size}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className={styles.projectsCta}>
-          <a href="#" className={styles.viewAllBtn}>
-            View All Projects
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
-        </div>
-      </section>
 
       {/* ══════════════════════════════════════════
           WHY CHOOSE US
@@ -591,7 +454,7 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════
           TESTIMONIALS
       ══════════════════════════════════════════ */}
-      <section
+      {/* <section
         ref={(el) => addRef(el, "testimonials")}
         className={`${styles.testimonialsSection} ${isVisible("testimonials") ? styles.visible : ""}`}
       >
@@ -624,7 +487,6 @@ export default function HomePage() {
           ))}
         </div>
 
-        {/* Dots */}
         <div className={styles.testimonialDots}>
           {TESTIMONIALS.map((_, i) => (
             <button
@@ -634,7 +496,7 @@ export default function HomePage() {
             />
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* ══════════════════════════════════════════
           CTA SECTION
@@ -717,7 +579,8 @@ export default function HomePage() {
                       <circle cx="10" cy="7" r="2" />
                     </svg>
                   ),
-                  label: "65/445 A, Judges avenue,5th cross road ,Kaloor-682017,Ernakulam",
+                  label:
+                    "65/445 A, Judges avenue,5th cross road ,Kaloor-682017,Ernakulam",
                 },
                 {
                   icon: (
@@ -774,7 +637,16 @@ export default function HomePage() {
 
           <div className={styles.contactPreviewRight}>
             <div className={styles.contactMapCard}>
-              <div className={styles.contactMapPlaceholder}>
+              <iframe
+                src="https://www.google.com/maps?q=65/445+A,+Judges+Avenue,+5th+Cross+Road,+Kaloor,+Ernakulam,+Kerala+682017&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              {/* <div className={styles.contactMapPlaceholder}>
                 <div className={styles.mapGrid}>
                   {[...Array(25)].map((_, i) => (
                     <div key={i} className={styles.mapCell} />
@@ -790,8 +662,8 @@ export default function HomePage() {
                     <circle cx="16" cy="14" r="5" fill="white" opacity="0.9" />
                   </svg>
                 </div>
-                <div className={styles.mapLabel}>Business Bay, Dubai</div>
-              </div>
+                <div className={styles.mapLabel}>Kaloor, Ernakulam</div>
+              </div> */}
             </div>
           </div>
         </div>

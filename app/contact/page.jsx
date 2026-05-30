@@ -179,7 +179,7 @@ ${formData.message}`;
           {/* Stats */}
           <div className={styles.statsRow}>
             <div className={styles.statItem}>
-              <div className={styles.statNum}>1000+</div>
+              <div className={styles.statNum}>250+</div>
               <div className={styles.statLabel}>Projects</div>
             </div>
             <div className={styles.statDivider} />

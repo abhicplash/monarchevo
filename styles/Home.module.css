@@ -1305,12 +1305,18 @@
 }
 
 .contactMapCard {
-  background: var(--navy-card);
-  border: 1px solid var(--navy-border);
-  border-radius: 16px;
+  height: 500px;
+  border-radius: 24px;
   overflow: hidden;
+  border: 1px solid rgba(74, 158, 255, 0.15);
+  background: var(--navy-card);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.contactMapCard iframe {
+  width: 100%;
   height: 100%;
-  min-height: 380px;
+  display: block;
 }
 .contactMapPlaceholder {
   position: relative;
